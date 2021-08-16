@@ -22,5 +22,5 @@ int *ft_prefixfun(char *s)
 
 char *ft_strstr(char *s1, char *s2)
 {
-    wh
+    
 }
