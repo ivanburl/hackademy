@@ -1,6 +1,6 @@
 #include "libft.h"
 
-int ft_tolower(int ch)
+int ft_tolower(char ch)
 {
     if ((int)'A' <= ch && ch <= (int)'Z')
     {
