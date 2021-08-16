@@ -1,9 +1,8 @@
 #include "libft.h"
 
-char *ft_strchr(char *str, int ch)
+char *ft_strchr(char *str, char ch)
 {
-    char *tmp = str;
-    while (*str!='\0')
+    while (*str != '\0')
     {
         if ((int)*str == ch)
         {
@@ -11,5 +10,11 @@ char *ft_strchr(char *str, int ch)
         }
         str++;
     }
+
+    if ((int)*str == ch)
+    {
+        return str;
+    }
+
     return NULL;
 }
