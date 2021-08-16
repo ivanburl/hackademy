@@ -2,6 +2,7 @@
 UTILS			= $(addprefix utils/, sigsegv.cpp color.cpp check.cpp leaks.cpp)
 PARENT_DIR		= $(shell dirname $(shell pwd))
 LIBFT_PATH		= ../
+TESTS_PATH		= tests/
 MANDATORY		= abs div bzero memcpy memccpy memmove memchr memcmp isalpha isdigit \
 				isascii toupper tolower strchr strrchr strncmp strnstr \
 				strdup strsub strjoin strtrim strsplit strmap \

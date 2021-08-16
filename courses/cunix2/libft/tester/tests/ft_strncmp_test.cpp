@@ -1,7 +1,7 @@
 extern "C"
 {
 #define new hackademy
-#include "libft.h"
+#include "src/libft.h"
 #undef new
 }
 
