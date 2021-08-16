@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 CC					:= gcc
 RM					:= rm -rf
 CFLAGS		    	+= -std=c99 -Iinclude -Wall -Wextra -Werror -c
@@ -15,3 +16,12 @@ checkstyle:
 
 clean:
 				$(RM) $(OBJS) $(LIB_NAME)
+=======
+all:
+	@rm libft.a
+	gcc -Wall -c *.c 
+	ar -cvq libft.a *.o
+	@rm -f *.o
+clean:
+	@rm -f *.o libft.a
+>>>>>>> 12c69d2 (week 3 day 1 done)
