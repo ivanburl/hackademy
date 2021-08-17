@@ -11,3 +11,6 @@ char *ft_strrchr(char *str, char ch);                                 //find LAS
 int ft_tolower(char ch);
 int ft_toupper(char ch);
 int ft_strlen(char *s);
+div_t ft_div(int numerator, int denominator); // return {a/b,a%b}
+int ft_abs(int val);
+char *ft_strstr(char *s1, char *s2); // find s2 in s1
