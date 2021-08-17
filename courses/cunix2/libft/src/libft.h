@@ -13,5 +13,7 @@ int ft_toupper(char ch);
 int ft_strlen(char *s);
 div_t ft_div(int numerator, int denominator); // return {a/b,a%b}
 int ft_abs(int val);
-char *ft_strstr(char *s1, char *s2);             // find s2 in s1
-void *ft_memset(void *buf, char ch, size_t num); // set buf[0]..buf[num-1] to ch (in original optimised to O(n/32))
+char *ft_strstr(char *s1, char *s2);                                    // find s2 in s1
+void *ft_memset(void *buf, char ch, size_t num);                        // set buf[0]..buf[num-1] to ch (in original optimised to O(n/32))
+void *ft_memcpy(void *dest, const void *source, size_t count);          //copy from source to dest only count bytes dest!=source
+void *ft_memccpy(void *dest, const void *source, char ch, int count); //the same as memcpy but only to ch charachter dest!=source
