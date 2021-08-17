@@ -3,10 +3,9 @@
 void *ft_memset(void *buf, char ch, size_t num)
 {
     char *tmp = (char *)buf;
-    while (num--)
+    for (size_t i = 0; i<num;i++)
     {
-        *tmp = ch;
-        tmp++;
+        tmp[i]=ch;
     }
     return (void *)tmp;
 }
