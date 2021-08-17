@@ -10,7 +10,7 @@ int ft_strncmp(const char *string1, const char *string2, size_t num);    //compa
 char *ft_strrchr(char *str, char ch);                                    //find LAST occurance of ch
 int ft_tolower(char ch);                                                 //only 'A'..'Z'
 int ft_toupper(char ch);                                                 //only 'a'..'z'
-size_t ft_strlen(char *s);                                                  //length og string
+size_t ft_strlen(char *s);                                               //length og string
 div_t ft_div(int numerator, int denominator);                            //return {a/b,a%b}
 int ft_abs(int val);                                                     //absolute value
 char *ft_strstr(char *s1, char *s2);                                     //find s2 in s1
@@ -19,3 +19,5 @@ void *ft_memset(void *buf, char ch, size_t num);                         //set b
 void *ft_memcpy(void *dest, const void *source, size_t count);           //copy from source to dest only count bytes dest!=source
 void *ft_memccpy(void *dest, const void *source, char ch, size_t count); //the same as memcpy but only to ch charachter dest!=source
 void *ft_memmove(void *destination, const void *source, size_t n);       //move n bytes from source to the destination
+void *ft_memchr(const void *arr, char ch, size_t n);                     // find ch in arr
+int ft_memcmp(const void *buf1, const void *buf2, size_t count);         //simple cmp for strings
