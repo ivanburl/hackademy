@@ -2,8 +2,8 @@
 
 int ft_memcmp(const void *buf1, const void *buf2, size_t count)
 {
-    char *tmp_buf1 = (char *)buf1;
-    char *tmp_buf2 = (char *)buf2;
+    unsigned char *tmp_buf1 = (unsigned char *)buf1;
+    unsigned char *tmp_buf2 = (unsigned char *)buf2;
     for (size_t i = 0; i < count; i++)
     {
         if (tmp_buf1[i] == tmp_buf2[i])
