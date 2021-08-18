@@ -21,3 +21,10 @@ void *ft_memccpy(void *dest, const void *source, char ch, size_t count); //the s
 void *ft_memmove(void *destination, const void *source, size_t n);       //move n bytes from source to the destination
 void *ft_memchr(const void *arr, char ch, size_t n);                     // find ch in arr
 int ft_memcmp(const void *buf1, const void *buf2, size_t count);         //simple cmp for strings
+void ft_striter(char *s, void (*f)(char *));
+char *ft_strmap(char const *s, char (*f)(char));
+char* ft_strsub(char const *s, unsigned int start, size_t len);
+char *ft_strjoin(char const *s1, char const *s2);
+char* ft_strtrim(char const *s);
+int ft_isspace(char ch);
+char **ft_strsplit(char const *s, char c);
