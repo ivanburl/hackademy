@@ -72,13 +72,13 @@ void ft_printf(char *format, ...)
                 minus = plus = 0;
                 s = "(null)";
             }
-            len = strlen(s);
+            len = ft_strlen(s);
             break;
         case 'd':
             tmp = va_arg(arg, int);
             minus = tmp >= 0 ? 0 : 1;
             s = ft_itoa(tmp);
-            len = strlen(s);
+            len = ft_strlen(s);
             break;
         case 'c':
             ch = va_arg(arg, int);
@@ -89,7 +89,7 @@ void ft_printf(char *format, ...)
             tmp = va_arg(arg, int);
             minus = tmp >= 0 ? 0 : 1;
             s = ft_itoa(tmp);
-            len = strlen(s);
+            len = ft_strlen(s);
             break;
         case '%':
             ch = '%';
@@ -137,7 +137,7 @@ void ft_printf(char *format, ...)
         printn(' ', count_spaces_left);
         count_spaces_left = 0;
 
-        write(1, s, strlen(s));
+        write(1, s, ft_strlen(s));
 
         printn(' ', count_spaces_right);
         count_spaces_right = 0;

@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include <string.h>
 
+int ft_strlen(char *s);
 char *ft_itoa(int num);
 void ft_printf(char *format, ...);
 int isdigit(int ch);
