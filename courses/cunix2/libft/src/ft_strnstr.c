@@ -11,7 +11,7 @@ char *ft_strnstr(char *s1, char *s2, size_t n)
         return s1;
     }
 
-    for (size_t i = 0; i+len2 <= len1; i++)
+    for (size_t i = 0; i + len2 <= len1; i++)
     {
         int ok = 1;
         for (size_t j = 0; j < len2; j++)

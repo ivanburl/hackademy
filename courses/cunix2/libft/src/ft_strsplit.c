@@ -12,7 +12,7 @@ char **ft_strsplit(const char *s, char delim)
         }
     }
 
-    if (len_s && s[0]!=delim) 
+    if (len_s && s[0] != delim)
     {
         sz_blocks++;
     }
@@ -40,15 +40,15 @@ char **ft_strsplit(const char *s, char delim)
         }
     }
 
-    if (last!=len_s)
+    if (last != len_s)
     {
-            tmp[cur] = malloc(len_s - last + 1);
-            for (size_t j = last; j < len_s; j++)
-            {
-                tmp[cur][j - last] = s[j];
-            }
-            tmp[cur][len_s - last] = '\0';
-            cur++;
+        tmp[cur] = malloc(len_s - last + 1);
+        for (size_t j = last; j < len_s; j++)
+        {
+            tmp[cur][j - last] = s[j];
+        }
+        tmp[cur][len_s - last] = '\0';
+        cur++;
     }
 
     tmp[cur] = NULL;

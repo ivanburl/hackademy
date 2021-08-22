@@ -10,7 +10,8 @@ char *ft_itoa(int val)
     {
         buff[i++] = nmb % 10 + '0';
         nmb /= 10;
-    } while (nmb != 0);
+    } 
+    while (nmb != 0);
 
     char *res = malloc(i + 1);
 

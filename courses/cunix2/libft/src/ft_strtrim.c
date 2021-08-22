@@ -22,7 +22,7 @@ char *ft_strtrim(char const *s)
 
     for (size_t i = real_sz; i > left; i--)
     {
-        if (ft_isspace(s[i-1]) == 1)
+        if (ft_isspace(s[i - 1]) == 1)
         {
             right--;
         }

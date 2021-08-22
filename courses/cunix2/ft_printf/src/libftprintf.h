@@ -1,10 +1,8 @@
 #include <stdlib.h>
 #include <stdarg.h>
-#include <stdio.h>
 #include <unistd.h>
-#include <string.h>
 
-int ft_strlen(char *s);
+int ft_strlen(const char *s);
 char *ft_itoa(int num);
 void ft_printf(char *format, ...);
 int isdigit(int ch);

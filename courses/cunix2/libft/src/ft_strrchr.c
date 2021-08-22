@@ -13,7 +13,8 @@ char *ft_strrchr(char *str, char ch)
         str++;
     }
     if ((int)*str == ch)
+    {
         res = str;
-
+    }
     return res;
 }

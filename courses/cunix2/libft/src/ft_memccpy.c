@@ -2,9 +2,9 @@
 
 void *ft_memccpy(void *dest, const void *source, char ch, size_t count)
 {
-    if (dest==source)
+    if (dest == source)
     {
-        exit(-1);//error exception
+        exit(-1); //error exception
     }
 
     char *tmp_dest = (char *)dest;

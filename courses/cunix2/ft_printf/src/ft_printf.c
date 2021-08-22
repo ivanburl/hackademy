@@ -3,10 +3,10 @@
 void ft_printf(char *format, ...)
 {
     char *traverse;
-    //int i;
 
     va_list arg;
     va_start(arg, format);
+
     for (traverse = format; *traverse != '\0'; traverse++)
     {
         while (*traverse != '%')
@@ -37,68 +37,68 @@ void ft_printf(char *format, ...)
         //zero flag (+ and 1 space)
         switch (*traverse)
         {
-        case '+':
-            plus = 1;
-            traverse++;
-            break;
-        case ' ':
-            space = 1;
-            traverse++;
-            break;
+            case '+':
+                plus = 1;
+                traverse++;
+                break;
+            case ' ':
+                space = 1;
+                traverse++;
+                break;
         }
 
         //first flag (spaces and 0)
         switch (*traverse)
         {
-        case '-':
-            traverse++;
-            count_spaces_right = calculate(&traverse);
-            break;
-        case '0':
-            traverse++;
-            count_zeroes = calculate(&traverse);
-            break;
+            case '-':
+                traverse++;
+                count_spaces_right = calculate(&traverse);
+                break;
+            case '0':
+                traverse++;
+                count_zeroes = calculate(&traverse);
+                break;
         }
 
         count_spaces_left = calculate(&traverse);
-        //printf("%d",count_spaces_left);
+
         //second flag (letters)
         switch (*traverse)
         {
-        case 's':
-            s = va_arg(arg, char *);
-            if (s == NULL)
-            {
-                minus = plus = 0;
-                s = "(null)";
-            }
-            len = ft_strlen(s);
-            break;
-        case 'd':
-            tmp = va_arg(arg, int);
-            minus = tmp >= 0 ? 0 : 1;
-            s = ft_itoa(tmp);
-            len = ft_strlen(s);
-            break;
-        case 'c':
-            ch = va_arg(arg, int);
-            s = &ch;
-            len = 1;
-            break;
-        case 'i':
-            tmp = va_arg(arg, int);
-            minus = tmp >= 0 ? 0 : 1;
-            s = ft_itoa(tmp);
-            len = ft_strlen(s);
-            break;
-        case '%':
-            ch = '%';
-            minus = plus = space = 0;
-            count_spaces_right = count_spaces_left = 0;
-            count_zeroes = 0;
-            s = &ch;
-            len = 1;
-            break;
+            case 's':
+                s = va_arg(arg, char *);
+                if (s == NULL)
+                {
+                    plus = minus = 0;
+                    s = "(null)";
+                }
+                len = ft_strlen(s);
+                break;
+            case 'd':
+                tmp = va_arg(arg, int);
+                minus = tmp >= 0 ? 0 : 1;
+                s = ft_itoa(tmp);
+                len = ft_strlen(s);
+                break;
+            case 'c':
+                ch = va_arg(arg, int);
+                s = &ch;
+                len = 1;
+                break;
+            case 'i':
+                tmp = va_arg(arg, int);
+                minus = tmp >= 0 ? 0 : 1;
+                s = ft_itoa(tmp);
+                len = ft_strlen(s);
+                break;
+            case '%':
+                ch = '%';
+                minus = plus = space = 0;
+                count_spaces_right = count_spaces_left = 0;
+                count_zeroes = 0;
+                s = &ch;
+                len = 1;
+                break;
         }
 
         len += (minus || plus || space);
@@ -137,7 +137,10 @@ void ft_printf(char *format, ...)
         printn(' ', count_spaces_left);
         count_spaces_left = 0;
 
-        write(1, s, ft_strlen(s));
+        if (s != NULL)
+        {
+            write(1, s, ft_strlen(s));
+        }
 
         printn(' ', count_spaces_right);
         count_spaces_right = 0;

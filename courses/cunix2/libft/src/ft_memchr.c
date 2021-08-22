@@ -7,7 +7,7 @@ void *ft_memchr(const void *arr, char ch, size_t n)
     {
         if (tmp_arr[i] == ch)
         {
-            return (tmp_arr+i);
+            return (tmp_arr + i);
         }
     }
     return NULL;

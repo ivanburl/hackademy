@@ -1,9 +1,14 @@
 #include "libftprintf.h"
 
-int ft_strlen(char *s)
+int ft_strlen(const char *s)
 {
+    if (s == NULL)
+    {
+        return 0;
+    }
+
     int len = 0;
-    while(*s!='\0')
+    while (*s != '\0')
     {
         len++;
         s++;
